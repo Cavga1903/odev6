@@ -9,7 +9,9 @@ async function getWeather() {
         // 🌬️ Rüzgar hızını km/h olarak hesapla (m/s * 3.6)
         const windSpeedKmh = data.wind.speed ? (data.wind.speed * 3.6).toFixed(1) : "N/A";
  
-        document.getElementById("city").innerHTML = `${data.name} 📍`;
+        document.getElementById("city").innerHTML = `${data.name} <span class="material-symbols-outlined">
+location_on
+</span>`;
 
 
 
@@ -18,7 +20,9 @@ async function getWeather() {
         const gun = now.getDate(); // 23
         const haftaGunu = now.toLocaleString("tr-TR", { weekday: "long" }); // Perşembe
 
-        document.getElementById("city").innerHTML = `${data.name} 📍`;
+        document.getElementById("city").innerHTML = `${data.name} <span class="material-symbols-outlined">
+location_on
+</span>`;
         document.getElementById("date").innerHTML = `${ay}, ${gun}, ${haftaGunu}`;
 
 
